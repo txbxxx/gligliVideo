@@ -1,13 +1,14 @@
 import {post,get} from "@/utils/request";
-import {createVideo, listVideo,detailVideo} from "@/api/video";
+import {createVideo, listVideo, detailVideo, uploadVideo} from "@/api/video";
 
 
 //创建视频
-export function create(title,info,url) {
+export function create(title,info,url,cover) {
     return post(createVideo,{
             title: title,
             info: info,
-            url: url
+            url: url,
+            cover: cover
     })
 }
 
@@ -23,5 +24,12 @@ export function list(page,size) {
 export function detail(identity) {
     return get(detailVideo(identity),{
         identity: identity
+    })
+}
+
+//上传视频
+export function upload(fileName) {
+    return post(uploadVideo,{
+        file_name: fileName
     })
 }

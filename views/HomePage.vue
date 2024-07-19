@@ -3,7 +3,7 @@
       <el-row>
         <el-col :span="4" v-for="item in data" :key="item.identity" class="video-card">
           <el-card style="max-width: 240px"  @click="toVideoDetail(item)">
-            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" style="width: 100%"/>
+            <img :src="item.cover" style="width: 100%"/>
             <div class="video-title">{{item.title}}</div>
             <div class="video-info">{{item.info}}</div>
           </el-card>

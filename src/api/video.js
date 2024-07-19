@@ -6,3 +6,5 @@ export const listVideo = "/video/list"
 export const deleteVideo = (identity) => `/video/${identity}`;
 // 视频详情
 export const detailVideo = (identity) => `/video/${identity}`;
+// 上传视频
+export const uploadVideo = "/video/upload";
